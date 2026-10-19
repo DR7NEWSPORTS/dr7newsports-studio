@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>DR7Newsports Studio</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">DR<span>7</span></div><div><strong>DR7Newsports</strong><small>STUDIO</small></div></div>
+    <nav>
+      <button class="nav-item active" data-view="dashboard">▦ <span>Painel</span></button>
+      <button class="nav-item" data-view="library">▤ <span>Conteúdos</span></button>
+      <button class="nav-item" data-view="create">＋ <span>Novo conteúdo</span></button>
+      <button class="nav-item" data-view="workflow">✓ <span>Revisão editorial</span></button>
+    </nav>
+    <div class="sidebar-note"><span class="dot"></span> Modo local <small>Os dados ficam neste navegador</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><p class="eyebrow">CENTRAL DE PRODUÇÃO ESPORTIVA</p><h1 id="page-title">Painel geral</h1></div><button class="primary" id="new-content">＋ Novo conteúdo</button></header>
+    <section id="app-view"></section>
+    <footer>DR7Newsports Studio <span>•</span> Rascunhos sempre precisam de aprovação manual antes de publicar.</footer>
+  </main>
+  <dialog id="content-dialog">
+    <form id="content-form" method="dialog">
+      <div class="dialog-head"><div><p class="eyebrow">ESTÚDIO EDITORIAL</p><h2 id="form-title">Criar conteúdo</h2></div><button type="button" class="icon-btn" id="close-dialog" aria-label="Fechar">✕</button></div>
+      <input type="hidden" id="content-id">
+      <label>Título ou gancho<input id="title" required maxlength="140" placeholder="Ex.: Clássico promete fortes emoções"></label>
+      <div class="two-col">
+        <label>Tipo<select id="type"><option>Notícia</option><option>Transferência</option><option>Confronto</option><option>Resultado</option><option>Escalação</option><option>Estatística</option><option>Meme</option><option>Vídeo curto</option></select></label>
+        <label>Plataforma<select id="platform"><option>Instagram</option><option>TikTok</option><option>Instagram e TikTok</option><option>Outro</option></select></label>
+      </div>
+      <label>Texto / legenda<textarea id="body" rows="5" placeholder="Escreva o conteúdo. Confira os fatos e fontes antes de enviar para revisão."></textarea></label>
+      <label>Fonte ou link para verificação<input id="source" type="url" placeholder="https://... (opcional)"></label>
+      <label>Observações editoriais<input id="notes" placeholder="Ex.: confirmar informação com fonte oficial"></label>
+      <div class="dialog-actions"><button type="button" class="secondary" id="cancel-dialog">Cancelar</button><button type="submit" class="primary">Salvar rascunho</button></div>
+      <p class="form-hint">Salvar não publica. Todo conteúdo começa como rascunho.</p>
+    </form>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

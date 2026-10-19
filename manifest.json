@@ -1,0 +1,10 @@
+{
+  "name": "DR7Newsports Studio",
+  "short_name": "DR7 Studio",
+  "description": "Estúdio editorial de conteúdo esportivo",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0b0c",
+  "theme_color": "#0b0b0c",
+  "icons": []
+}
